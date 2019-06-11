@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClick(View view) {
-        Intent intent = new Intent(this, RobotBuilderActivity.class);
+        Intent intent = new Intent(this, BotListActivity.class);
         startActivity(intent);
     }
 }

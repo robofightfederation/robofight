@@ -14,6 +14,7 @@ public class Robot {
     private String attackStyle;
     private int wins;
     private int loses;
+    private boolean isDestroyed;
 
     @Exclude
     public String getId() {
@@ -63,5 +64,13 @@ public class Robot {
 
     public void setLoses(int loses) {
         this.loses = loses;
+    }
+
+    public boolean isDestroyed() {
+        return isDestroyed;
+    }
+
+    public void setDestroyed(boolean destroyed) {
+        isDestroyed = destroyed;
     }
 }

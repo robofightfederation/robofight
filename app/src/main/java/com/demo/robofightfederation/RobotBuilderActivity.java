@@ -2,6 +2,8 @@ package com.demo.robofightfederation;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -35,6 +37,11 @@ public class RobotBuilderActivity extends AppCompatActivity {
 
     }
 
+    private void gotoBotList() {
+        Intent intent = new Intent(this, BotListActivity.class);
+        startActivity(intent);
+    }
+
     public void onCreateClick(View view) {
 
         Robot robo = new Robot();
@@ -51,6 +58,7 @@ public class RobotBuilderActivity extends AppCompatActivity {
                     @Override
                     public void onSuccess(DocumentReference documentReference) {
                         Log.d(TAG, "Robo FF created: " + documentReference.getId());
+                        gotoBotList();
                     }
                 });
     }
