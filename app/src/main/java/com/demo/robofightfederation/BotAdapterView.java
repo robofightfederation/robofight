@@ -87,6 +87,4 @@ public class BotAdapterView extends RecyclerView.Adapter<BotAdapterView.BotAdapt
         this.robots.add(robot);
         this.notifyItemInserted(this.robots.size() - 1);
     }
-
-
 }

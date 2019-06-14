@@ -43,6 +43,8 @@ public class BotListActivity extends AppCompatActivity {
         db.collection("robots").addSnapshotListener(new EventListener<QuerySnapshot>() {
             @Override
             public void onEvent(@Nullable QuerySnapshot queryDocumentSnapshots, @Nullable FirebaseFirestoreException e) {
+                // TODO: error checking, deletes:
+                // https://firebase.google.com/docs/firestore/query-data/listen
 
                 for (DocumentSnapshot doc : queryDocumentSnapshots.getDocuments()) {
                     if (doc.exists()) {

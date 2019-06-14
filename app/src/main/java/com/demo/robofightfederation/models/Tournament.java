@@ -15,6 +15,8 @@ public class Tournament {
 
     private String hatPrize;
 
+    private int bracketSize;
+
     private List<Round> rounds;
 
     public String getWinnerId() {
@@ -47,5 +49,13 @@ public class Tournament {
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    public int getBracketSize() {
+        return bracketSize;
+    }
+
+    public void setBracketSize(int bracketSize) {
+        this.bracketSize = bracketSize;
     }
 }
